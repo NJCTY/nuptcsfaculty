@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E9E9E9;
+    font-size: 12px;
+    font-family: STSong, SimSun;
+}
+
+div.navTop {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    width: 500px
+}
+
+div.sq0 {
+    width: 16px;
+    height: 30px;
+    background-color: #083462;
+    left: 14px;
+    position: absolute;
+}
+
+div.sq1 {
+    width: 24px;
+    height: 30px;
+    background-color: #AEB7C5;
+    left: 44px;
+    position: absolute;
+}
+
+div.sq2 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #0A2038;
+    left: 57px;
+    top: -8px;
+}
+
+div.part1 {
+    color: #24376A;
+    position: absolute;
+    font-size: 26px;
+    left: 230px;
+    font-weight: bold;
+}
+
+div.part2 {
+    background-color: #043564;
+    position: absolute;
+    width: 460px;
+    top: 34px;
+    height: 4px;
+}
+
+div.part3 {
+    color: #24376A;
+    position: absolute;
+    top: 44px;
+    font-size: 20px;
+    left: 14px;
+}
+
+div.container {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    min-width: 1320px;
+    height: 640px;
+    background-color: #FFFFFF;
+    border: 2px solid #DCDBDC;
+    margin: 0 auto;
+}
+
+div.floatCard {
+    position: absolute;
+    right: 860px;
+    top: 100px;
+}
+
+div.floatCard ul li {
+    list-style-type: none;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: #335582;
+    transform: rotate(45deg);
+    transition: box-shadow 1s;
+    cursor: pointer;
+}
+
+div.floatCard ul li:hover {
+    box-shadow: -16px -16px 6px #7D94AD;
+}
+
+div.floatCard ul li.li1 {
+    left: 300px;
+}
+
+div.floatCard ul li.li2 {
+    left: 600px;
+}
+
+div.floatCard ul li.li3 {
+    left: 154px;
+    top: 250px;
+}
+
+div.floatCard ul li.li4 {
+    left: 454px;
+    top: 250px;
+}
+
+div.floatCard ul li div {
+    position: absolute;
+    font-size: 22px;
+    color: #fff;
+    width: 200px;
+    transform: rotate(-45deg);
+}
+
+div.floatCard ul li.li0 div {
+    top: 70px;
+    left: -20px;
+}
+
+div.floatCard ul li.li1 div,
+div.floatCard ul li.li2 div {
+    top: 34px;
+    left: 12px;
+}
+
+div.floatCard ul li.li3 div {
+    top: 50px;
+    left: -4px;
+}
+
+div.floatCard ul li.li4 div {
+    top: 42px;
+    left: 4px;
+}
+
+div.intro {
+    position: absolute;
+    z-index: 1000;
+    top: 40px;
+    left: 45px;
+    width: 410px;
+    height: 500px;
+    background-color: #E8E9EE;
+    border: 1px solid #C2C2C2;
+    border-radius: 8px;
+    display: none;
+}
+
+div#app div.introShow {
+    display: block;
+    animation: show .6s ease-in-out;
+}
+@keyframes show {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+div.intro ul {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+div.intro ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+li.name {
+    margin: 20px;
+    width: 160px;
+    height: 70px;
+    background-color: #33567F;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+li.name a {
+    margin-top: 12px;
+    display: block;
+}
+
+li.name:hover {
+    background-color: #062E35;
+}
+
+div.logo {
+    position: absolute;
+    top: 275px;
+    left: 50px;
+}
+
+div.foot {
+    min-width: 1100px;
+    position: absolute;
+    top: 720px;
+    color: rgb(51, 85, 130);
+    left: 40px;
+    margin-bottom: 30px;
+}
+
+div.close {
+    position: absolute;
+    top: 440px;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    border: 4px solid #103660;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #103660;
+    line-height: 48px;
+    text-align: center;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+div.close:hover {
+    background-color: #33567F;
+    color: #E8E9EE;
+}
+
+@media only screen and (max-width: 1231px) {
+	div.floatCard {
+		left: 437px;
+	}
+}
