@@ -18,7 +18,7 @@
 			</div>
 			<div class="main">
 				<div class="top">
-					<div class="name">Xingguao Chen</div>
+					<div class="name">{{name}}</div>
 					<div class="intro">
 						<p>School of Computer and Software,</p>
 						<p>Nanjing University of Posts & Telecommunications, China</p>
@@ -27,14 +27,10 @@
 				<div class="leftTop">
 					<div class="nav">
 						<ul>
-							<li>个人主页</li>
-							<li>教育背景</li>
-							<li>发表论文</li>
-							<li>项目</li>
-							<li>荣誉获奖</li>
+							<li v-for="item in items" @click="showContent($index)">{{item}}</li>
 						</ul>
 					</div>
-					<img src="normal.jpg" alt="">
+					<img :src="imgSrc" alt="照片">
 				</div>
 				<div class="leftBottom">
 					<div class="logo">
@@ -42,53 +38,32 @@
 						<p style="position: absolute;left: 130px;top: 20px;font-size: 22px;color: #354F74">Nanjing University of Posts & Telecommunications</p>
 					</div>
 					<div class="simple">
-						<p class="ti">办公地点：</p>
-						<p class="content">科研楼811（三牌楼）/行政北楼500（仙林）</p>
-						<p class="ti">Email</p>
-						<p class="content">xuhe@njupt.edu.cn</p>
-						<p class="ti">移动电话</p>
-						<p class="content">18936036251</p>
-						<p class="ti">单位电话</p>
-						<p class="content">025-85866354(计科系办公室)</p>
+						<p class="ti">办公地点:</p>
+						<p class="content">{{address}}</p>
+						<p class="ti">Email:</p>
+						<p class="content">{{email}}</p>
+						<p class="ti">移动电话:</p>
+						<p class="content">{{mobile}}</p>
+						<p class="ti">单位电话:</p>
+						<p class="content">{{company}}</p>
 					</div>
 				</div>
 				<div class="right">
-					<div class="rightTitle">个人主页</div>
-					<p class="pp">研究方向：物联网技术应用、信息安全
-
-主要研究内容：主要从事与RFID、无线传感器网络、物联网技术相关的科研项目，研究方向涵盖了RFID网络中间件软件技术、复杂事件处理技术、基于对等计算（P2P）的物联网发现服务机制、物联网隐私保护以及物联网在智慧城市、智能家居、定位导航等方面的应用技术及其安全。
-
- 
-
-主要成果：作为项目组主要成员，参与了国家863、国家自然科学基金、江苏省自然科学基金、南京市高技术研究计划、江苏省高校自然科学基金项目、华为高校基金、中兴合作项目等多项科研项目。在《International Journal of Distributed Sensor Networks》、《邮电高校学报（英）》等国内外核心期刊发表近20篇学术论文，其中SCI/EI收录论文12篇。作为发明人参与获得发明专利授权10项，发明专利申请20余项。作为主要开发者获得软件著作权登记6项，参与编写科研专著1部。2008年论文被评为江苏省计算机学会优秀论文。2011年获南京邮电大学优秀研究生及万全优秀博士研究生荣誉。
-
- 
-
-作为项目负责人，完成了江苏省博士研究生科研创新计划项目和企业合作项目各1项，目前主持在研江苏省自然科学青年基金、中国博士后基金、江苏省教育厅高校面上项目、江苏省博士后基金、南京邮电大学引进人才基金各一项。研究方向：物联网技术应用、信息安全
-
-主要研究内容：主要从事与RFID、无线传感器网络、物联网技术相关的科研项目，研究方向涵盖了RFID网络中间件软件技术、复杂事件处理技术、基于对等计算（P2P）的物联网发现服务机制、物联网隐私保护以及物联网在智慧城市、智能家居、定位导航等方面的应用技术及其安全。
-
- 
-
-主要成果：作为项目组主要成员，参与了国家863、国家自然科学基金、江苏省自然科学基金、南京市高技术研究计划、江苏省高校自然科学基金项目、华为高校基金、中兴合作项目等多项科研项目。在《International Journal of Distributed Sensor Networks》、《邮电高校学报（英）》等国内外核心期刊发表近20篇学术论文，其中SCI/EI收录论文12篇。作为发明人参与获得发明专利授权10项，发明专利申请20余项。作为主要开发者获得软件著作权登记6项，参与编写科研专著1部。2008年论文被评为江苏省计算机学会优秀论文。2011年获南京邮电大学优秀研究生及万全优秀博士研究生荣誉。
-
- 
-
-作为项目负责人，完成了江苏省博士研究生科研创新计划项目和企业合作项目各1项，目前主持在研江苏省自然科学青年基金、中国博士后基金、江苏省教育厅高校面上项目、江苏省博士后基金、南京邮电大学引进人才基金各一项。研究方向：物联网技术应用、信息安全
-
-主要研究内容：主要从事与RFID、无线传感器网络、物联网技术相关的科研项目，研究方向涵盖了RFID网络中间件软件技术、复杂事件处理技术、基于对等计算（P2P）的物联网发现服务机制、物联网隐私保护以及物联网在智慧城市、智能家居、定位导航等方面的应用技术及其安全。
-
- 
-
-主要成果：作为项目组主要成员，参与了国家863、国家自然科学基金、江苏省自然科学基金、南京市高技术研究计划、江苏省高校自然科学基金项目、华为高校基金、中兴合作项目等多项科研项目。在《International Journal of Distributed Sensor Networks》、《邮电高校学报（英）》等国内外核心期刊发表近20篇学术论文，其中SCI/EI收录论文12篇。作为发明人参与获得发明专利授权10项，发明专利申请20余项。作为主要开发者获得软件著作权登记6项，参与编写科研专著1部。2008年论文被评为江苏省计算机学会优秀论文。2011年获南京邮电大学优秀研究生及万全优秀博士研究生荣誉。
-
- 
-
-作为项目负责人，完成了江苏省博士研究生科研创新计划项目和企业合作项目各1项，目前主持在研江苏省自然科学青年基金、中国博士后基金、江苏省教育厅高校面上项目、江苏省博士后基金、南京邮电大学引进人才基金各一项。</p>
+					<div class="rightTitle">{{title}}</div>
+					<p class="pp">{{content}}</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src="http://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+	<script src="__PUBLIC__/fetch.js"></script>
+	<script>
+		function getTypeId () {
+			//此处模板变量
+			var arr = [1,2]
+			return arr;
+		}
+	</script>
+	<script src="__PUBLIC__/get.js"></script>
 </body>
 </html>

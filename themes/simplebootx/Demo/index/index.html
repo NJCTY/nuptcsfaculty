@@ -16,7 +16,7 @@
                 <div class="sq1"></div>
                 <div class="sq2"></div>
             </div>
-            <div class="part1">计算机学院、软件学院</div>
+            <div class="part1">计算机、软件学院</div>
             <div class="part2">
             </div>
             <div class="part3">School of Computer Science & Technology，School of Software</div>
@@ -33,41 +33,9 @@
             <!--introduce card-->
             <div v-bind:class="[{introShow: check}]" class="intro">
                 <ul>
-                    <li class="name" align="center">
-                        <a>徐佳1</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
-                    </li>
-                    <li class="name" align="center">
-                        <a>徐佳</a>
-                        <a>XuJia</a>
+                    <li class="name" align="center" v-for="name in names">
+                        <a :href="'?type='+type+'&id='+id">{{name.name}}</a>
+                        <a :href="'?type='+type+'&id='+id">{{name.pinyin}}</a>
                     </li>
                 </ul>
                 <div class="close" @click="check = false">×</div>
@@ -82,6 +50,7 @@
         </div>
     </div>
     <script src="http://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+    <script src="__PUBLIC__/fetch.js"></script>
     <script type="text/javascript" src="__PUBLIC__/main.js"></script>
 </body>
 

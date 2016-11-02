@@ -8,7 +8,7 @@ body {
     font-size: 12px;
     font-family: STSong, SimSun;
     width: 100%;
-	min-width: 1280px;
+	min-width: 1200px;
 	color: #183B68;
 }
 
@@ -17,7 +17,7 @@ div.navTop {
 	top: 0;
 	left: 0;
 	width: 100%;
-	min-width: 1280px;
+	min-width: 1200px;
 	color: #0F406E;
 	background-color: #fff;
 	font-size: 20px;
@@ -28,7 +28,7 @@ div.navTop {
 
 div.container {
 	width: 84%;
-	min-width: 1280px;
+	min-width: 1200px;
 	min-height: 500px;
 	margin: 100px auto;
 }
@@ -43,7 +43,7 @@ div.njupt {
 div.main {
 	width: 84%;
 	position: absolute;
-	min-width: 1280px;
+	min-width: 1200px;
 	background-color: #fff;
 	min-height: 800px;
 	top: 220px;
@@ -90,15 +90,15 @@ div.leftTop img {
 	position: absolute;
 	left: 300px;
 	top: 0;
-	border: 1px solid #F0EFF0; 
+	border: 1px solid #DDDDDD; 
 }
 div.leftBottom {
 	position: absolute;
 	top: 440px;
 	left: 60px;
-	width: 510px;
+	width: 40%;
 	min-height: 400px;
-	border-top: 1px solid #F0EFF0; 
+	border-top: 1px solid #DDDDDD; 
 }
 div.logo img {
 	width: 79px;
@@ -141,7 +141,7 @@ div.right .pp {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: justify;
-	line-height: 130%;
+	line-height: 150%;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
