@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
-        items: [],
+        items: ['个人信息','ss'],
         name: '',
         imgSrc: '',
         title: '',
@@ -10,7 +10,7 @@ var app = new Vue({
         address: '',
         email: '',
         mobile: '',
-        company: ''
+        company: '' 
     },
     methods: {
         showContent: function(e) {
@@ -23,7 +23,7 @@ var app = new Vue({
 function ajax() {
 	//此处是api
 	var info = getTypeId();
-    fetch('index.php?type='+info[0]+'&id='+info[1]).then(function(data) {
+    fetch('index.php/Demo/index/get?type='+info[0]+'&id='+info[1]).then(function(data) {
  		return data.json();
     }).then(function(val) {
     	/*对val需要的参数：

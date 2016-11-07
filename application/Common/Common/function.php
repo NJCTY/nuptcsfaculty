@@ -3,6 +3,36 @@
  * 获取当前登录的管事员id
  * @return int
  */
+function uploadwebsite(){
+	//找用户名字
+	$admincode = sp_get_current_admin_id();
+	$name = M('users') -> where("id = ".$admincode) ->select();
+	$realname = $name[0]['realname'];
+
+
+	$upload = new \Think\Upload();// 实例化上传类
+	$upload->maxSize   =     3145728 ;// 设置附件上传大小
+   				   $upload->exts      =     array('zip');// 设置附件上传类型
+    			   $upload->rootPath  =      './Uploads/'; // 设置附件上传根目录
+    			   $upload->savePath  =      ''; // 设置附件上传（子）目录
+      			   $info   =   $upload->upload();
+    if(!$info) {// 上传错误提示错误信息
+    	$this->error("上传错误");
+        }
+        else{
+			 foreach($info as $file){
+			     $zip = new \ZipArchive;
+                 if($zip -> open('./Uploads/'.$file['savepath'].$file['savename'])===TRUE){
+                 	$zip -> extractTo('./'.$realname);
+                 	$zip->close();
+                 }else{
+                 	$this->error("解压错误");
+                 }
+            } 
+        }
+}
+
+
 function get_current_admin_id(){
 	return session('ADMIN_ID');
 }

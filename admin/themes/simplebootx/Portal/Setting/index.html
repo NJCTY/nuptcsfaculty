@@ -1,9 +1,27 @@
 <admintpl file="header" />
 </head>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/jquery.js">
+<script type="text/javascript">
+	$(document).ready(function(){
+		if($("#self").attr("checked")){
+			$("#upload").show();
+		}
+		$("#self").click(function(){
+			$("#upload").show();
+		});
+		$("#multi").click(function(){
+			$("#upload").hide();
+		});
+		$("#single").click(function(){
+			$("#upload").hide();
+		});
+
+			});
+</script>
 <body>
 	<div class="wrap js-check-wrap">
 
-		<form class="form-horizontal js-ajax-forms" action="{:U('AdminPage/post')}" method="post" enctype="multipart/form-data" >
+		<form class="form-horizontal js-ajax-forms" action="{:U('Setting/save')}" method="post" enctype="multipart/form-data" >
 			<fieldset>
 				<div class="tabbable">
 					<div class="tab-content">
@@ -12,14 +30,14 @@
 								<div class="control-group">
 									<label class="control-label">主页类型*</label>
 									<div class="controls">
-										<label><input name="Fruit" type="radio" value="1" {$type.self} />自行上传 </label> 
-										<label><input name="Fruit" type="radio" value="2" {$type.multi} />多页面主页 </label> 
-										<label><input name="Fruit" type="radio" value="3" {$type.single}/>单页面主页</label>
+										<label><input name="type" id="self" type="radio" value="1" {$type.self} />自行上传 </label> 
+										<label><input name="type" id="multi" type="radio" value="2" {$type.multi} />多页面主页 </label> 
+										<label><input name="type" id="single" type="radio" value="3" {$type.single}/>单页面主页</label>
 										
 									</div>
 								</div>
 							
-								<div class="control-group" id = "upload">
+								<div class="control-group" id = "upload" style="display: none;">
 								<label class="control-label">上传自己的主页</label>
 								<div class="controls">
 

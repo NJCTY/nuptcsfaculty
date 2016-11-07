@@ -8,6 +8,12 @@ class IndexController extends HomebaseController{
 		$this->display();
 	}
 	function sample(){
+		$data = M('content') -> where("id = $_GET[id] and type =$_GET[type]")->select();
+		$this->assign('content',$data[0]);
 		$this->display();
 	}
+	// function get(){
+	// 			$data = M('content') -> where("id = $_GET[id] and type =$_GET[type]")->select();
+	// 	$this->ajaxReturn($data);
+	// }
 }
